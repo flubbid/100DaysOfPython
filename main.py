@@ -61,3 +61,37 @@
 # print(f"Your final bill is: ${total}.")
 
 # Exercise 5 - Love Calculator
+# 🚨 Don't change the code below 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
+digit1 = name1.lower().count("t")
+digit1 += name1.lower().count("r")
+digit1 += name1.lower().count("u")
+digit1 += name1.lower().count("e")
+digit1 += name2.lower().count("t")
+digit1 += name2.lower().count("r")
+digit1 += name2.lower().count("u")
+digit1 += name2.lower().count("e")
+
+digit2 = name1.lower().count("l")
+digit2 += name1.lower().count("o")
+digit2 += name1.lower().count("v")
+digit2 += name1.lower().count("e")
+digit2 += name2.lower().count("l")
+digit2 += name2.lower().count("o")
+digit2 += name2.lower().count("v")
+digit2 += name2.lower().count("e")
+
+total = str(digit1) + str(digit2)
+
+
+if int(total) < 10 or int(total) > 90:
+    print(f"Your score is {total}, you go together like coke and mentos.")
+elif int(total) >= 40 and int(total) <= 50:
+    print(f"Your score is {total}, you are alright together.")
+else:
+    print(f"Your score is {total}.")
