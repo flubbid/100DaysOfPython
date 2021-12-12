@@ -112,3 +112,35 @@
 #     print("Tails")
 
 # print("Num: " + str(random.randint(0, 1)))
+
+# import random
+# # 🚨 Don't change the code below 👇
+# test_seed = int(input("Create a seed number: "))
+# random.seed(test_seed)
+
+# # Split string method
+# names_string = input("Give me everybody's names, separated by a comma. ")
+# names = names_string.split(", ")
+# # 🚨 Don't change the code above 👆
+
+# # Write your code below this line 👇
+# print(names[random.randint(0, len(names) - 1)] + " is going to buy the meal today!")
+
+# Exercise 3 - Treasure Map 
+# 🚨 Don't change the code below 👇
+row1 = ["1", "2", "3"]
+row2 = ["4", "5", "6"]
+row3 = ["7", "8", "9"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+# Write your code below this row 👇
+map[int(position[1]) - 1][int(position[0]) - 1] = "X"
+
+
+# Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
