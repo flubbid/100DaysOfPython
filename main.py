@@ -125,22 +125,86 @@
 
 # # Write your code below this line 👇
 # print(names[random.randint(0, len(names) - 1)] + " is going to buy the meal today!")
+# import random
 
-# Exercise 3 - Treasure Map 
-# 🚨 Don't change the code below 👇
-row1 = ["1", "2", "3"]
-row2 = ["4", "5", "6"]
-row3 = ["7", "8", "9"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? ")
-# 🚨 Don't change the code above 👆
+# random.r
+# # Exercise 3 - Treasure Map 
+# # 🚨 Don't change the code below 👇
+# row1 = ["1", "2", "3"]
+# row2 = ["4", "5", "6"]
+# row3 = ["7", "8", "9"]
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+# position = input("Where do you want to put the treasure? ")
+# # 🚨 Don't change the code above 👆
 
-# Write your code below this row 👇
-map[int(position[1]) - 1][int(position[0]) - 1] = "X"
+# # Write your code below this row 👇
+# map[int(position[1]) - 1][int(position[0]) - 1] = "X"
 
 
-# Write your code above this row 👆
+# # Write your code above this row 👆
 
-# 🚨 Don't change the code below 👇
-print(f"{row1}\n{row2}\n{row3}")
+# # 🚨 Don't change the code below 👇
+# print(f"{row1}\n{row2}\n{row3}")
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
+
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
+
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
+
+# # Write your code below this line 👇
+# import random
+# user_choice = input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors: ")
+
+# computer_choice = random.randint(0, 2)
+
+# print("Computes Hand")
+# if computer_choice == 0:
+#   print(rock)
+# if(computer_choice ==1):
+#   print(paper)
+# else:
+#   print(scissors)
+
+
+# winner_result = "You shouldn't see this."
+# if user_choice == computer_choice:
+#     winner_result = "DRAW"
+# elif user_choice == 0:
+# if(computer_choice == 2):
+#     winner_result = "USER WINS"
+#   else:
+#     winner_result = "COMPUTE WINS"
+# elif user_choice == 1:
+#   if(computer_choice == 0):
+#     winner_result = "USER WINS"
+#   else:
+#     winner_result = "COMPUTE WINS"
+# else:
+#   if(computer_choice == 1):
+#     winner_result = "USER WINS"
+#   else:
+#     winner_result = "COMPUTE WINS"
+
+# print(winner_result)
