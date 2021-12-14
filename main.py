@@ -226,17 +226,34 @@
 # average = sum/count
 # print(round(average))
 
-# 5.2
-# 🚨 Don't change the code below 👇
-student_scores = input("Input a list of student scores ").split()
-for n in range(0, len(student_scores)):
-  student_scores[n] = int(student_scores[n])
-print(student_scores)
-# 🚨 Don't change the code above 👆
+# # 5.2
+# # 🚨 Don't change the code below 👇
+# student_scores = input("Input a list of student scores ").split()
+# for n in range(0, len(student_scores)):
+#   student_scores[n] = int(student_scores[n])
+# print(student_scores)
+# # 🚨 Don't change the code above 👆
 
-# Write your code below this row 👇
-potato = 0
-for score in student_scores:
-    if potato <= score:
-        potato = score
-print(f"The highest score in the class is: {potato}")
+# # Write your code below this row 👇
+# potato = 0
+# for score in student_scores:
+#     if potato <= score:
+#         potato = score
+# print(f"The highest score in the class is: {potato}")
+
+# total = 0
+# for number in range(1, 101):
+#     if number % 2 == 0:
+#         total += number
+
+# print(total)
+
+for number in range(1, 101):
+    output = ""
+    if(number % 3 == 0):
+        output += "Fizz"
+    if(number % 5 == 0):
+        output += "Buzz"
+    if(output == ""):
+        output = number
+    print(output)
