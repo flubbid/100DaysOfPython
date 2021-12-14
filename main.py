@@ -259,31 +259,52 @@
 #     print(output)
 
 
-# 5 Password Generator Project
-import random
-letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+# # 5 Password Generator Project
+# import random
+# letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+# numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+# symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-print("Welcome to the PyPassword Generator!")
-nr_letters = int(input("How many letters would you like in your password?\n"))
-nr_symbols = int(input("How many symbols would you like?\n"))
-nr_numbers = int(input("How many numbers would you like?\n"))
+# print("Welcome to the PyPassword Generator!")
+# nr_letters = int(input("How many letters would you like in your password?\n"))
+# nr_symbols = int(input("How many symbols would you like?\n"))
+# nr_numbers = int(input("How many numbers would you like?\n"))
 
-charList = []
+# charList = []
 
 
-for letter in range(0, nr_letters + 1):
-    charList.append(letters[random.randint(0, len(letters) - 1)])
-for symbol in range(0, nr_symbols + 1):
-    charList.append(symbols[random.randint(0, len(symbols) - 1)])
-for number in range(0, nr_numbers + 1):
-    charList.append(numbers[random.randint(0, len(numbers) - 1)])
+# for letter in range(0, nr_letters + 1):
+#     charList.append(letters[random.randint(0, len(letters) - 1)])
+# for symbol in range(0, nr_symbols + 1):
+#     charList.append(symbols[random.randint(0, len(symbols) - 1)])
+# for number in range(0, nr_numbers + 1):
+#     charList.append(numbers[random.randint(0, len(numbers) - 1)])
 
-password = ""
-random.shuffle(charList)
-for item in charList:
-    password += item
+# password = ""
+# random.shuffle(charList)
+# for item in charList:
+#     password += item
        
-print("Random Output:  " + password)
+# print("Random Output:  " + password)
   
+# DAY 6 ROBOT GAME REEBORG'S WORLD
+# MAZE
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+    
+# while not at_goal():    
+#     if front_is_clear() and wall_on_right():
+#         move()
+#     elif wall_on_right() and wall_in_front():
+#         turn_left()
+#     elif right_is_clear():
+#         turn_right()
+#         if front_is_clear():
+#             move()
+#     elif wall_in_front():
+#         turn_right()
+#     else:    
+#         turn_left()
+    
