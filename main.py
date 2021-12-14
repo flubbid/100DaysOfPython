@@ -270,25 +270,20 @@ nr_letters = int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input("How many symbols would you like?\n"))
 nr_numbers = int(input("How many numbers would you like?\n"))
 
-output = ""
+charList = []
 
 
 for letter in range(0, nr_letters + 1):
-    output += letters[random.randint(0, len(letters) - 1)]
+    charList.append(letters[random.randint(0, len(letters) - 1)])
 for symbol in range(0, nr_symbols + 1):
-    output += symbols[random.randint(0, len(symbols) - 1)]
+    charList.append(symbols[random.randint(0, len(symbols) - 1)])
 for number in range(0, nr_numbers + 1):
-    output += numbers[random.randint(0, len(numbers) - 1)]
+    charList.append(numbers[random.randint(0, len(numbers) - 1)])
 
-numList = []
-
-for char in range(0, len(output) - 1):
-    numList.append(output[char])
-    
-randomizedOutput = ""
-random.shuffle(numList)
-for item in numList:
-    randomizedOutput += item
-        
-print("Random Output:  " + randomizedOutput)
+password = ""
+random.shuffle(charList)
+for item in charList:
+    password += item
+       
+print("Random Output:  " + password)
   
