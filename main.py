@@ -307,4 +307,108 @@
 #         turn_right()
 #     else:    
 #         turn_left()
-    
+
+
+# DAY 7 HANGMAN GAME
+import random
+# Step 1 
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+word_list = ["aardvark", "baboon", "camel"]
+splitWord = []
+wordbank = []
+wrong_guess_Count = 0
+correct_guess_Count = 0
+max_incorrect_guess_amt = 7
+game_end = True
+
+
+# TODO-1 - Randomly choose a word from the word_list and assign it to a variable called chosen_word.
+chosen_word = word_list[random.randint(0, len(word_list) - 1)]
+print("secret word: " + chosen_word)
+# TODO-2 - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
+# TODO-3 - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
+for char in range(len(chosen_word)):
+    wordbank.append("_")
+
+while game_end:
+    wrong_guess_flag = True
+    guess = input("Guess a letter! ").lower()
+    count = 0
+    for char in chosen_word:    
+        if guess == char:
+            wordbank[count] = char
+            wrong_guess_flag = False
+        count += 1
+    print(wordbank)
+    if wrong_guess_flag:
+        wrong_guess_Count += 1
+    if wrong_guess_Count == 0:
+        print(stages[7])
+    else:
+        print(stages[-wrong_guess_Count])  
+    print(f"Your number of wrong guesses {wrong_guess_Count}")
+    if wrong_guess_Count == max_incorrect_guess_amt:
+        print(stages[-wrong_guess_Count])
+        print("YOU LOOSE!")
+        game_end = False
+    if "_" not in wordbank:
+        print("YOU WIN")
+        game_end = False
+
+       
